@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Shayan Shafiee Moghadam</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Shayan Shafiee Moghadam</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 May 2025 09:55:06 +0330</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Journey</title>
+      <link>http://localhost:1313/journey/</link>
+      <pubDate>Wed, 14 May 2025 09:55:06 +0330</pubDate>
+      <guid>http://localhost:1313/journey/</guid>
+      <description>&lt;h1 id=&#34;work-experience&#34;&gt;WORK EXPERIENCE&lt;/h1&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQFIOmQcwTXY5g/company-logo_100_100/company-logo_100_100/0/1630513308234/hamravesh_logo?e=1752710400&amp;v=beta&amp;t=TITd5IY69lWY8N6JUJToOIlKRcIlTRVMNJ6znd1pQV4&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://hamravesh.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Hamravesh Cloud&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Aug 2024 - Present
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed the core billing and pricing system for a backup service, leveraging Django for API implementation and React for frontend redesign, driving a monthly revenue of 300 million tomans&lt;/li&gt;
+&lt;li&gt;Designed and implemented two backup workflows using Temporal for snapshot migration and garbage collection, increasing backup capacity by 20% without additional resource costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/D4D0BAQG7Yx-JnkeKww/company-logo_100_100/company-logo_100_100/0/1715671804727/venue_wise_logo?e=1752710400&amp;v=beta&amp;t=0e1FGuezZo6uUGC7MwGT4IzUGcEBCY1dojGDyDfew1E&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://venuewise.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Venue Wise&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      May 2024 - Jul 2024 (3 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Dubai, United Arab Emirates (Remote) . Contract&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;nothing yet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Senior Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Oct 2022 - Jul 2024 (1 yr 10 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Drove the design, architecture, and implementation of a “Checkout as a Service” platform, enabling diverse sales options such as e-gift cards, fresh goods, cheque payments, and coupon usage, leading to a 13% increase in total sales.&lt;/li&gt;
+&lt;li&gt;Architected the centralized order management service using temporal durable workflows, enabling seamless integration of business partners into the core system.&lt;/li&gt;
+&lt;li&gt;Architected and developed the user subscriptions microservice, seamlessly migrating subscription logic from the legacy codebase to the new microservice architecture, resulting in faster development and deployment speeds.&lt;/li&gt;
+&lt;li&gt;Integrated the existing codebase with the GrowthBook platform for A/B testing and feature flagging, optimizing performance to handle high traffic volumes and eliminating GrowthBook as a bottleneck for user requests, enabling marketing and user research teams to run 4x more A/B tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Apr 2021 - Oct 2022 (1 yr 7 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed, implemented, and launched the backend of a B2B sales site using a Symfony-based framework, enabling seamless sales transactions for companies. This initiative introduced a new B2B business line alongside the existing B2C model, contributing 5% to yearly total sales and expanding the customer base by 10% within the first year.&lt;/li&gt;
+&lt;li&gt;Developed a PHP Snowplow SDK to track user activities and transmit events to the big data team, improving data accuracy and providing actionable insights for big data and marketing teams to drive decision-making.&lt;/li&gt;
+&lt;li&gt;Built and deployed a new cashback system for Prime users, enhancing user loyalty and driving a 30% increase in repeat purchases among Prime members.&lt;/li&gt;
+&lt;li&gt;Developed a Python framework for generating reports and analytics from Jira data, leveraging Python data pipelines, PostgreSQL, and DBT. This automation streamlined Scrum Master tasks, reducing the team’s dependency on one full-time Scrum Master and improving operational efficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Bootcamp Instructor&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Jul 2022 - Sep 2022 (3 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Part-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Led a 6-person team through intensive software engineering instruction over 2 months, provided technical guidance and project oversight, resulting in hiring 4 bootcamp graduates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Data Analyst&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Jul 2019 - Apr 2021 (1 yr 10 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Proposed a Profit Contribution (PC2) calculation model aimed at providing insights for optimizing operational costs and boosting revenue.&lt;/li&gt;
+&lt;li&gt;Developed a discount optimization model and its accompanying data pipeline utilizing Python, PowerBI, and SQL Server, resulting in providing enhanced recommendations to the business for setting optimal discounts, thereby increasing revenue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C560BAQFaRNyDG5O8Cg/company-logo_100_100/company-logo_100_100/0/1630625333751/bluebitsoft_logo?e=1752710400&amp;v=beta&amp;t=q2sva6ksAVz0mMULXkfSmr4TUYRX9sLIUEjzoxfWh5Y&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Business Intelligence Analyst&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;BlueBitSoft&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Jun 2020 - Sep 2020 (4 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Netherlands (Remote) . Part-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed and enhanced visualization dashboards in PowerBI to deliver actionable managerial insights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;skills&#34;&gt;SKILLS&lt;/h1&gt;
+&lt;div style=&#34;display: flex; align-items: end; gap: 15px;&#34;&gt;
+&lt;p&gt;Programming Languages:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Side Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Wed, 14 May 2025 09:55:06 +0330</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;p&gt;&lt;em&gt;These are projects I’ve built in my free time to explore new technologies, solve interesting problems, and push my skills beyond my full-time work.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tech-career-explorer&#34;&gt;🚀 Tech Career Explorer&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Data-Driven Insights for Tech Industry Careers&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;A web-based tool for analyzing salary trends, skill demand, and career paths across the tech industry.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stack:&lt;/strong&gt; Python, MageAI, PostgreSQL, DuckDB, DBT, Metabase&lt;br&gt;
+&lt;strong&gt;→ &lt;a href=&#34;https://github.com/shayansm2/tech-career-explorer&#34;&gt;View on GitHub&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-github-events-analyzer&#34;&gt;📊 GitHub Events Analyzer&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Real-Time Pipeline for Repository Activity Insights&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Processes GitHub event data to visualize contributor activity, PR trends, and repository health via Kibana dashboards.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Sat, 03 May 2025 23:56:34 +0330</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&lt;h1 id=&#34;work-experience&#34;&gt;WORK EXPERIENCE&lt;/h1&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQFIOmQcwTXY5g/company-logo_100_100/company-logo_100_100/0/1630513308234/hamravesh_logo?e=1752710400&amp;v=beta&amp;t=TITd5IY69lWY8N6JUJToOIlKRcIlTRVMNJ6znd1pQV4&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://hamravesh.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Hamravesh Cloud&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Aug 2024 - Present
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed the core billing and pricing system for backup service, generating monthly revenue of +300 million tomans.&lt;/li&gt;
+&lt;li&gt;Redesigned and migrated backup service pages using Django (API) and React (frontend), and led the transition from a monolith to microservices—including deployment and database migration—enabling development team autonomy.&lt;/li&gt;
+&lt;li&gt;Analyzed and identified recurring operational tasks in the backup system, designed and implemented two automated workflows using Temporal—for snapshot migration and backup garbage collection—resulting in a ~40% reduction in operational workload and ~20% increase in backup storage capacity without added infrastructure costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/D4D0BAQG7Yx-JnkeKww/company-logo_100_100/company-logo_100_100/0/1715671804727/venue_wise_logo?e=1752710400&amp;v=beta&amp;t=0e1FGuezZo6uUGC7MwGT4IzUGcEBCY1dojGDyDfew1E&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://venuewise.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Venue Wise&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      May 2024 - Jul 2024 (3 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Dubai, United Arab Emirates (Remote) . Contract&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;nothing yet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Senior Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Oct 2022 - Jul 2024 (1 yr 10 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Drove the design, architecture, and implementation of a “Checkout as a Service” platform, enabling diverse sales options such as e-gift cards, fresh goods, cheque payments, and coupon usage, leading to a 13% increase in total sales.&lt;/li&gt;
+&lt;li&gt;Architected the centralized order management service using temporal durable workflows, enabling seamless integration of business partners into the core system.&lt;/li&gt;
+&lt;li&gt;Architected and developed the user subscriptions microservice, seamlessly migrating subscription logic from the legacy codebase to the new microservice architecture, resulting in faster development and deployment speeds.&lt;/li&gt;
+&lt;li&gt;Integrated the existing codebase with the GrowthBook platform for A/B testing and feature flagging, optimizing performance to handle high traffic volumes and eliminating GrowthBook as a bottleneck for user requests, enabling marketing and user research teams to run 4x more A/B tests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Software Engineer&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Apr 2021 - Oct 2022 (1 yr 7 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed, implemented, and launched the backend of a B2B sales site using a Symfony-based framework, enabling seamless sales transactions for companies. This initiative introduced a new B2B business line alongside the existing B2C model, contributing 5% to yearly total sales and expanding the customer base by 10% within the first year.&lt;/li&gt;
+&lt;li&gt;Developed a PHP Snowplow SDK to track user activities and transmit events to the big data team, improving data accuracy and providing actionable insights for big data and marketing teams to drive decision-making.&lt;/li&gt;
+&lt;li&gt;Built and deployed a new cashback system for Prime users, enhancing user loyalty and driving a 30% increase in repeat purchases among Prime members.&lt;/li&gt;
+&lt;li&gt;Developed a Python framework for generating reports and analytics from Jira data, leveraging Python data pipelines, PostgreSQL, and DBT. This automation streamlined Scrum Master tasks, reducing the team’s dependency on one full-time Scrum Master and improving operational efficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Bootcamp Instructor&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Jul 2022 - Sep 2022 (3 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Part-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Led a 6-person team through intensive software engineering instruction over 2 months, provided technical guidance and project oversight, resulting in hiring 4 bootcamp graduates.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGshHg22ds-ug/company-logo_100_100/company-logo_100_100/0/1652508506193/digikala_logo?e=1752710400&amp;v=beta&amp;t=E5-4IITE8O_B8whLN0NlZ5R9RJcs5h8ck4SpJWRE9-M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Data Analyst&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://www.digikala.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Digikala&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Jul 2019 - Apr 2021 (1 yr 10 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Tehran - Iran . Full-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Proposed a Profit Contribution (PC2) calculation model aimed at providing insights for optimizing operational costs and boosting revenue.&lt;/li&gt;
+&lt;li&gt;Developed a discount optimization model and its accompanying data pipeline utilizing Python, PowerBI, and SQL Server, resulting in providing enhanced recommendations to the business for setting optimal discounts, thereby increasing revenue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
+  &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C560BAQFaRNyDG5O8Cg/company-logo_100_100/company-logo_100_100/0/1630625333751/bluebitsoft_logo?e=1752710400&amp;v=beta&amp;t=q2sva6ksAVz0mMULXkfSmr4TUYRX9sLIUEjzoxfWh5Y&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;div style=&#34;font-weight: bold; font-size: 1.1em;&#34;&gt;Business Intelligence Analyst&lt;/div&gt;
+      &lt;div&gt;
+        &lt;a href=&#34;https://bluebitsoft.codes/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;BlueBitSoft&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;text-align: right; white-space: nowrap; font-size: 0.9em;&#34;&gt;
+      Jun 2020 - Sep 2020 (4 mos)
+      &lt;div style=&#34;font-size: 0.85em;&#34;&gt;Netherlands (Remote) . Part-time&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed and enhanced visualization dashboards in PowerBI to deliver actionable managerial insights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;education&#34;&gt;EDUCATION&lt;/h1&gt;
+&lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+&lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4E0BAQE-NIX4SUSCOg/company-logo_100_100/company-logo_100_100/0/1631311354545?e=1752710400&amp;v=beta&amp;t=CPnmlJ32-UkdUmbnEod4_JdGQhTBp8JrgPxT0FD-Ghk&#34; alt=&#34;Company Logo&#34; 
+        style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+&lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+    &lt;div style=&#34;font-weight: font-size: 1.1em;&#34;&gt;Master of Science, Systems Optimization at University of Tehran&lt;/div&gt;
+    &lt;div&gt;
+&lt;div style=&#34;white-space: nowrap; font-size: 0.9em;&#34;&gt;May 2019 - Sep 2022&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
+&lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4E0BAQE-NIX4SUSCOg/company-logo_100_100/company-logo_100_100/0/1631311354545?e=1752710400&amp;v=beta&amp;t=CPnmlJ32-UkdUmbnEod4_JdGQhTBp8JrgPxT0FD-Ghk&#34; alt=&#34;Company Logo&#34; 
+        style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+&lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+    &lt;div style=&#34;font-weight: font-size: 1.1em;&#34;&gt;Bachelor of Science, Industrial Engineering at University of Tehran&lt;/div&gt;
+    &lt;div&gt;
+&lt;div style=&#34;white-space: nowrap; font-size: 0.9em;&#34;&gt;May 2015 - Sep 2019&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;certificates&#34;&gt;CERTIFICATES&lt;/h1&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGexnfBxeEG-g/company-logo_100_100/company-logo_100_100/0/1630530042036/coursera_logo?e=1752710400&amp;v=beta&amp;t=ngZYW0RXzsHSP5HhPC5u4ViCa8frSoWw1cqSJv5BuHs&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://www.coursera.org/account/accomplishments/verify/NYR3QBYLTVUW?utm_campaign=sharing_cta&amp;utm_content=cert_image&amp;utm_medium=certificate&amp;utm_product=course&amp;utm_source=android&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Go Programming Language&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+   &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGOojMZGgd04Q/company-logo_100_100/company-logo_100_100/0/1637478816527/quera_logo?e=1752710400&amp;v=beta&amp;t=Od-yLvOcn74i7kFtnF9nxDx0RE_EasU9pQca-ov-5_k&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://quera.org/media/public/quera_certificate/308b9b83401844eebc5f5f979530c851.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Backend Development with Golang&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+&lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/D560BAQG2k4od1BnFYw/company-logo_100_100/company-logo_100_100/0/1719946312124/temporal_technologies_logo?e=1752710400&amp;v=beta&amp;t=WIGHAhiBU69Wpqc8iQeT-6wepJnCYFP8EoDUcLZlFXQ&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://ibb.co/JyL4jMG&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Temporal 101&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;  
+    &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGOojMZGgd04Q/company-logo_100_100/company-logo_100_100/0/1637478816527/quera_logo?e=1752710400&amp;v=beta&amp;t=Od-yLvOcn74i7kFtnF9nxDx0RE_EasU9pQca-ov-5_k&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://quera.org/media/public/quera_certificate/6c2700964b7e4b6dbb280b328fa5a4f1.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Backend Development with Laravel&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGOojMZGgd04Q/company-logo_100_100/company-logo_100_100/0/1637478816527/quera_logo?e=1752710400&amp;v=beta&amp;t=Od-yLvOcn74i7kFtnF9nxDx0RE_EasU9pQca-ov-5_k&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://quera.org/media/public/quera_certificate/057908bf78d341e5a6c31d3cf2d2687f.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Linux&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/D4E0BAQH5aAQ1JS53KA/company-logo_100_100/company-logo_100_100/0/1714461206742?e=1753315200&amp;v=beta&amp;t=Voi6CuCwsqS0oAf-8as7LXk_TgpSoFUg79O2bp0xAaA&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://academy.arvancloud.ir/certificate/12721AC71-34F6884-33F89A2/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Associate DevOps Engineer&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+    &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGOojMZGgd04Q/company-logo_100_100/company-logo_100_100/0/1637478816527/quera_logo?e=1752710400&amp;v=beta&amp;t=Od-yLvOcn74i7kFtnF9nxDx0RE_EasU9pQca-ov-5_k&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://quera.org/media/public/quera_certificate/f8df1a6cae9941449b2d6c0f206ff8bb.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Data Structure and Algorithm&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQFY84TXDGjQTA/company-logo_100_100/company-logo_100_100/0/1640896517353/datatalks_club_logo?e=1752710400&amp;v=beta&amp;t=b9hWqMA8t1hrbD7bDe9jqlNvRVxLIxOTSeuvTQKjo9M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://certificate.datatalks.club/dezoomcamp/2024/3481f400d17ea5bdcaed692c4709d6b657a588e2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Data Engineering Zoomcamp&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQFzIxlpQ0lAdA/company-logo_100_100/company-logo_100_100/0/1630556211624/huggingface_logo?e=1752710400&amp;v=beta&amp;t=06QTNa6Jky4dVykFXQ_bN3jD7baKGpSrXCkams_lUik&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/Shyone/2025-03-04.png&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;AI Agents Fundamentals&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C560BAQGYxjMn8Ejunw/company-logo_100_100/company-logo_100_100/0/1630649588321/fishtown_analytics_logo?e=1752710400&amp;v=beta&amp;t=e2IWfQJo-oRvuxzdtusRWU_NBE5zCXmpxiQvr2vJiSk&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://www.credential.net/c7417459-3a44-41cc-8121-a9526598d224#gs.4osv01&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;dbt Fundamentals&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQFY84TXDGjQTA/company-logo_100_100/company-logo_100_100/0/1640896517353/datatalks_club_logo?e=1752710400&amp;v=beta&amp;t=b9hWqMA8t1hrbD7bDe9jqlNvRVxLIxOTSeuvTQKjo9M&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://certificate.datatalks.club/ml-zoomcamp/2023/3481f400d17ea5bdcaed692c4709d6b657a588e2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Machine Learning Zoomcamp&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGexnfBxeEG-g/company-logo_100_100/company-logo_100_100/0/1630530042036/coursera_logo?e=1752710400&amp;v=beta&amp;t=ngZYW0RXzsHSP5HhPC5u4ViCa8frSoWw1cqSJv5BuHs&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://www.coursera.org/account/accomplishments/verify/4VJK5VNUJFKS?utm_source=link&amp;utm_medium=certificate&amp;utm_content=cert_image&amp;utm_campaign=sharing_cta&amp;utm_product=course&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Neural Networks and Deep Learning&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&#34;display: flex; gap: 20px;&#34;&gt;
+    &lt;div style=&#34;flex: 1; display: flex; align-items: center; gap: 15px;&#34;&gt;
+    &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQGexnfBxeEG-g/company-logo_100_100/company-logo_100_100/0/1630530042036/coursera_logo?e=1752710400&amp;v=beta&amp;t=ngZYW0RXzsHSP5HhPC5u4ViCa8frSoWw1cqSJv5BuHs&#34; alt=&#34;Company Logo&#34; 
+         style=&#34;width: 40px; height: 40px; object-fit: contain;&#34; /&gt;
+    &lt;div style=&#34;display: flex; flex-direction: column;&#34;&gt;
+      &lt;a href=&#34;https://www.coursera.org/account/accomplishments/verify/BB5PV5BQUS68?utm_source=link&amp;utm_medium=certificate&amp;utm_content=cert_image&amp;utm_campaign=sharing_cta&amp;utm_product=course&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+         style=&#34;text-decoration: none; font-size: 0.9em;&#34;&gt;Improving Deep Neural Networks&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>LLM Transformers as ETL Transformers</title>
+      <link>http://localhost:1313/posts/llm-etl/</link>
+      <pubDate>Tue, 15 Apr 2025 20:32:21 +0330</pubDate>
+      <guid>http://localhost:1313/posts/llm-etl/</guid>
+      <description>&lt;p&gt;In a world full of AI hype—from chatbots that write code to flashy demo applications—I always felt that most tools were geared toward niche use cases like building QA bots or RAG agents. What really got me excited, however, was discovering a game-changing application for production-scale, non-AI companies: using LLMs to revolutionize ETL processes.&lt;/p&gt;
+&lt;p&gt;Traditionally, both the data source and the target had to be strictly structured. Data engineers spent countless hours writing code to map input data into a very specific schema. With LLMs the input data can be completely unstructured, and the model takes on the heavy lifting of transforming it into structured, usable data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Temporal VS DBOS </title>
+      <link>http://localhost:1313/posts/temporal-dbos/</link>
+      <pubDate>Wed, 05 Feb 2025 09:31:37 +0330</pubDate>
+      <guid>http://localhost:1313/posts/temporal-dbos/</guid>
+      <description>&lt;p&gt;I recently read &lt;a href=&#34;https://www.dbos.dev/blog/what-is-lightweight-durable-execution&#34;&gt;this article&lt;/a&gt; about a lightweight durable execution solution called DBOS. Meanwhile, I was working heavily with Temporal, a well-known open-source tool for durable executions. Technically, both serve the same purpose, but with major differences:&lt;/p&gt;
+&lt;p&gt;Temporal is heavyweight. To run it, you need a Temporal cluster, a database connected to the cluster, one or more Temporal workers, the Temporal UI, and finally, the Temporal SDK to trigger workflows from your application. On the other hand, DBOS is lightweight and requires only a database to store its data. The workflow runs within the same application that includes the DBOS library, whereas in Temporal, workflows run on separate resources called workers. Essentially, DBOS is a library, while Temporal is a full-fledged software solution that you interact with via its SDKs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Database Scaling: A Self-Interview</title>
+      <link>http://localhost:1313/posts/db-scaling/</link>
+      <pubDate>Thu, 30 Jan 2025 09:33:35 +0330</pubDate>
+      <guid>http://localhost:1313/posts/db-scaling/</guid>
+      <description>&lt;p&gt;In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If you have a database and a query takes longer than required to run, what would you do?&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;After discussing their response, we would follow up with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Now, what if the load on your database increases? What would you do now?&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This question helped assess whether the candidate could scale a database effectively without over-engineering. An immediate mention of &lt;strong&gt;CQRS&lt;/strong&gt; in the first round was often a red flag—indicating they skipped simpler solutions and jumped to complex ones. We also valued candidates who asked clarifying questions before proposing solutions. Jumping into an answer without knowing the &lt;strong&gt;QPS&lt;/strong&gt; (queries per second) or required response time was another bad sign.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blue-Collar Tech Worker</title>
+      <link>http://localhost:1313/posts/blue-collar/</link>
+      <pubDate>Tue, 21 Jan 2025 09:10:06 +0330</pubDate>
+      <guid>http://localhost:1313/posts/blue-collar/</guid>
+      <description>&lt;p&gt;I recently read this text on social media, and here are my thoughts. I both agree and disagree with it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4e14d498-87e9-42ea-be39-12b2fd136f40_1116x1090.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;But first, let’s align on the terminology. Based on the definitions in this text, a &amp;ldquo;real&amp;rdquo; software engineer is someone who builds tools and understands how they work. On the other hand, someone who reads the documentation of tools and connects them together is called a &amp;ldquo;blue-collar tech worker.&amp;rdquo; While one could argue about whether this term is accurate or not, let’s go with &amp;ldquo;blue-collar tech worker&amp;rdquo; to make it easier to discuss the differences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Personal Journey into Learning Kubernetes</title>
+      <link>http://localhost:1313/posts/k8s/</link>
+      <pubDate>Mon, 16 Dec 2024 09:14:38 +0330</pubDate>
+      <guid>http://localhost:1313/posts/k8s/</guid>
+      <description>&lt;p&gt;For the last three months, I’ve been diving deep into Kubernetes as part of my new job, and I decided to write this blog to share my journey in learning Kubernetes. If you work in a DevOps role or your company operates on Kubernetes, understanding it inside and out is essential. However, as a software engineer, I also encourage every other software engineer to learn Kubernetes. Here’s why:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;The Rise of No-Ops&lt;/strong&gt;&lt;br&gt;
+With the growing popularity of cloud solutions, there’s a noticeable shift from DevOps to No-Ops. Catching this trend early can put you ahead of the curve.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Transformation to Generalists&lt;/strong&gt;&lt;br&gt;
+The job market is evolving, thanks to advancements in GenAI and LLMs. Specialized roles like &amp;ldquo;Django Back-End Developer,&amp;rdquo; &amp;ldquo;React Front-End Developer,&amp;rdquo; or &amp;ldquo;DevOps Specialist&amp;rdquo; are increasingly giving way to more generalist roles. Today, I see more &amp;ldquo;full-function software engineers&amp;rdquo; whose responsibilities include designing solutions, coding both client and server sides, configuring builds, deploying to production, and delivering the final product. Based on this, I believe it’s becoming crucial for software engineers to develop cloud and Kubernetes skills.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A Masterclass in Design and Architecture&lt;/strong&gt;&lt;br&gt;
+Kubernetes&amp;rsquo; design is elegant and showcases some of the best practices in software architecture and design patterns. When you explore its components, it’s like watching Lego pieces come together to form a self-reliable infrastructure. The way Kubernetes uses separation of concerns and well-defined abstractions is inspiring—it’s no surprise that it has become the new standard for cloud and DevOps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All that aside, these are the resources I found most useful for learning and working with Kubernetes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dagger CI</title>
+      <link>http://localhost:1313/posts/dagger/</link>
+      <pubDate>Tue, 22 Oct 2024 09:18:06 +0330</pubDate>
+      <guid>http://localhost:1313/posts/dagger/</guid>
+      <description>&lt;p&gt;I was recently introduced to &lt;a href=&#34;https://dagger.io/&#34;&gt;dagger.io&lt;/a&gt; by my tech lead. Dagger is a CI tool created by Solomon Hykes, who is also the founder of Docker. I listened to his interview on the &lt;a href=&#34;https://kubernetespodcast.com/episode/236-dagger/&#34;&gt;kubernetes podcast&lt;/a&gt; and several aspects about the motivation behind Dagger caught my attention.&lt;/p&gt;
+&lt;p&gt;The most interesting aspect of Dagger is its objective to provide a separation of concerns. These days, the CI code and configuration you write are often tightly coupled with the specific technology or infrastructure you are using. For example, gitlab-ci.yaml files are tailored for GitLab runners, and GitHub Actions has its own unique file format. Dagger aims to unify CI pipeline configurations and code, making them executable anywhere—similar to Docker.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>My Personal Journey into Learning Kubernetes | Shayan Shafiee Moghadam</title>
+<meta name="keywords" content="">
+<meta name="description" content="For the last three months, I’ve been diving deep into Kubernetes as part of my new job, and I decided to write this blog to share my journey in learning Kubernetes. If you work in a DevOps role or your company operates on Kubernetes, understanding it inside and out is essential. However, as a software engineer, I also encourage every other software engineer to learn Kubernetes. Here’s why:
+
+The Rise of No-Ops
+With the growing popularity of cloud solutions, there’s a noticeable shift from DevOps to No-Ops. Catching this trend early can put you ahead of the curve.
+The Transformation to Generalists
+The job market is evolving, thanks to advancements in GenAI and LLMs. Specialized roles like &ldquo;Django Back-End Developer,&rdquo; &ldquo;React Front-End Developer,&rdquo; or &ldquo;DevOps Specialist&rdquo; are increasingly giving way to more generalist roles. Today, I see more &ldquo;full-function software engineers&rdquo; whose responsibilities include designing solutions, coding both client and server sides, configuring builds, deploying to production, and delivering the final product. Based on this, I believe it’s becoming crucial for software engineers to develop cloud and Kubernetes skills.
+A Masterclass in Design and Architecture
+Kubernetes&rsquo; design is elegant and showcases some of the best practices in software architecture and design patterns. When you explore its components, it’s like watching Lego pieces come together to form a self-reliable infrastructure. The way Kubernetes uses separation of concerns and well-defined abstractions is inspiring—it’s no surprise that it has become the new standard for cloud and DevOps.
+
+All that aside, these are the resources I found most useful for learning and working with Kubernetes.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/k8s/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/k8s/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shayan Shafiee Moghadam (Alt + H)">Shayan Shafiee Moghadam</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/resume/" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Side-Projects">
+                    <span>Side-Projects</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      My Personal Journey into Learning Kubernetes
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2024-12-16 09:14:38 +0330 +0330'>December 16, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>For the last three months, I’ve been diving deep into Kubernetes as part of my new job, and I decided to write this blog to share my journey in learning Kubernetes. If you work in a DevOps role or your company operates on Kubernetes, understanding it inside and out is essential. However, as a software engineer, I also encourage every other software engineer to learn Kubernetes. Here’s why:</p>
+<ol>
+<li><strong>The Rise of No-Ops</strong><br>
+With the growing popularity of cloud solutions, there’s a noticeable shift from DevOps to No-Ops. Catching this trend early can put you ahead of the curve.</li>
+<li><strong>The Transformation to Generalists</strong><br>
+The job market is evolving, thanks to advancements in GenAI and LLMs. Specialized roles like &ldquo;Django Back-End Developer,&rdquo; &ldquo;React Front-End Developer,&rdquo; or &ldquo;DevOps Specialist&rdquo; are increasingly giving way to more generalist roles. Today, I see more &ldquo;full-function software engineers&rdquo; whose responsibilities include designing solutions, coding both client and server sides, configuring builds, deploying to production, and delivering the final product. Based on this, I believe it’s becoming crucial for software engineers to develop cloud and Kubernetes skills.</li>
+<li><strong>A Masterclass in Design and Architecture</strong><br>
+Kubernetes&rsquo; design is elegant and showcases some of the best practices in software architecture and design patterns. When you explore its components, it’s like watching Lego pieces come together to form a self-reliable infrastructure. The way Kubernetes uses separation of concerns and well-defined abstractions is inspiring—it’s no surprise that it has become the new standard for cloud and DevOps.</li>
+</ol>
+<p>All that aside, these are the resources I found most useful for learning and working with Kubernetes.</p>
+<h3 id="resources-to-learn-kubernetes">Resources to Learn Kubernetes<a hidden class="anchor" aria-hidden="true" href="#resources-to-learn-kubernetes">#</a></h3>
+<p>I prefer to start by getting a big-picture understanding and then dive deeper into the details. For this reason, I recommend beginning your Kubernetes journey by watching YouTube videos. Here are two excellent videos from <a href="https://www.youtube.com/@TechWorldwithNana">Techworld with Nana</a> that I found incredibly helpful:</p>
+<ul>
+<li><a href="https://youtu.be/s_o8dwzRlu4?si=qto_Q"><strong>Kubernetes Crash Course for Absolute Beginners</strong></a>: A 1-hour introductory course.</li>
+<li><a href="https://youtu.be/X48VuDVv0do?si=7afRBw6iVUVAFhRi"><strong>Kubernetes Tutorial for Beginners</strong></a>: A more detailed 4-hour course.</li>
+</ul>
+<p>Once you have a general understanding of Kubernetes, you can move on to more detailed resources. I’ve explored these two books, but I’m sure there are many other excellent options out there:</p>
+<ul>
+<li><strong><a href="https://www.manning.com/books/kubernetes-in-action">Kubernetes in Action</a></strong><br>
+This is a fantastic book that walks you through Kubernetes concepts at a steady pace. It was recommended to me by my tech lead and does a brilliant job of explaining not only <em>how</em> Kubernetes works but also the <em>why</em> behind its design decisions. While reading it, you’ll not only learn how to work with Kubernetes but also gain insights into software design and architecture principles, such as separation of concerns (from SOLID principles) and abstraction. These are what make Kubernetes such a great tool for a wide range of use cases. That said, this book can feel overwhelming if you’re just looking to quickly understand how to use Kubernetes. If that’s the case, the next book might be a better starting point.</li>
+<li><strong><a href="https://www.manning.com/books/learn-kubernetes-in-a-month-of-lunches">Learn Kubernetes in a Month of Lunches</a></strong><br>
+This book takes a more practical approach while still covering all the essential Kubernetes concepts. It’s lighter than the previous book and includes hands-on experiments and labs to help you grasp the concepts through practice. While it doesn’t dive as deep as <em>Kubernetes in Action</em>, it explores interesting applications and use cases that grabbed my attention when I decided to read it. For example, it covers topics like connecting Elasticsearch to Kubernetes for better log management, integrating Kubernetes with Prometheus for metrics monitoring, and using Helm as a Kubernetes package manager.</li>
+</ul>
+<p>However, just by reading these materials, you won’t become a Kubernetes expert. It’s crucial to get hands-on experience and “get your hands dirty.”</p>
+<h3 id="resources-to-play-with-kubernetes">Resources to Play With Kubernetes<a hidden class="anchor" aria-hidden="true" href="#resources-to-play-with-kubernetes">#</a></h3>
+<p>If you prefer experimenting with Kubernetes locally, you can use one of the following tools:</p>
+<ul>
+<li><a href="https://k3s.io/"><strong>k3s</strong></a> (a lighter version of Kubernetes)</li>
+<li><a href="https://minikube.sigs.k8s.io/docs/"><strong>Minikube</strong></a></li>
+<li><a href="https://kind.sigs.k8s.io/"><strong>Kind</strong></a></li>
+<li><a href="https://docs.docker.com/desktop/features/kubernetes/"><strong>Docker Desktop Kubernetes Server</strong></a></li>
+</ul>
+<p>If you’re unsure how to set up a local Kubernetes cluster, you can search online, ask ChatGPT, or refer to the first chapter of <em>Learn Kubernetes in a Month of Lunches</em>, which provides clear instructions.</p>
+<p>If you prefer working in the cloud and avoiding any potential mess on your desktop computer (<em>I prefer this too</em>), here are some suggestions:</p>
+<ul>
+<li><strong><a href="https://labs.play-with-k8s.com/">Play with Kubernetes</a></strong><br>
+This site allows you to create nodes, launch Kubernetes worker and control plane nodes, and interact with them using <code>kubectl</code>—all <strong>for free</strong>. Each session lasts for 4 hours, and as far as I’ve checked, there’s no daily usage limit. The only downside is that you cannot access applications you create (using services or port-forwarding) via the given URL. This appears to be a bug that has been reported on their GitHub.</li>
+<li><strong><a href="https://labs.iximiuz.com/">iximiuz Labs</a></strong><br>
+This platform offers various tutorials and challenges (which I haven’t explored yet), as well as a Kubernetes playground where you can use Kubernetes for <strong>free</strong> in 2-hour sessions per day. If you need more time, their Premium plan provides extended access to labs and additional content.</li>
+<li><strong><a href="https://github.com/features/codespaces">GitHub Codespaces</a></strong><br>
+This is my favorite solution. You can fork a repository (e.g., I forked <a href="https://github.com/sixeyed/kiamol">this one</a>, which contains the files and labs from <em>Learn Kubernetes in a Month of Lunches</em>) and use Codespaces to create and experiment with your Kubernetes cluster. The great thing about Codespaces is that it comes pre-installed with tools like <code>docker</code> and <code>kubectl</code>. Plus, the first 120 hours per month are <strong>free</strong>. I use <a href="https://kind.sigs.k8s.io/">Kind</a> to create my cluster by following these steps:</li>
+</ul>
+<ol>
+<li>Create a <code>kind-config.yaml</code> file with the following configuration:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Cluster</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">kind.x-k8s.io/v1alpha4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">nodes</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">role</span>: <span style="color:#ae81ff">control-plane</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">role</span>: <span style="color:#ae81ff">worker</span>
+</span></span></code></pre></div><ol start="2">
+<li>Run the following commands in the terminal to download Kind, set it up, and create a Kubernetes cluster with two nodes (one control-plane and one worker):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span> <span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span> <span style="color:#f92672">=</span> x86_64 <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.25.0/kind-linux-amd64
+</span></span><span style="display:flex;"><span>chmod +x ./kind
+</span></span><span style="display:flex;"><span>sudo mv ./kind /usr/local/bin/kind
+</span></span><span style="display:flex;"><span>kind create cluster --config kind-config.yaml
+</span></span></code></pre></div><p>Lastly, there are tools that can simplify the Kubernetes experience. You can explore these and decide which ones best suit your needs.</p>
+<h3 id="tools">Tools<a hidden class="anchor" aria-hidden="true" href="#tools">#</a></h3>
+<ul>
+<li><strong><a href="https://kubernetes.io/docs/reference/kubectl/">kubectl</a></strong><br>
+This is the official command-line tool for interacting with Kubernetes. Most books and resources use <code>kubectl</code> as it is the standard way of managing Kubernetes. However, for beginners, <code>kubectl</code> can feel overwhelming—it might seem slow, confusing, and packed with options without any visual aids.
+If you find it frustrating, I recommend exploring other tools until you become more familiar with Kubernetes concepts, after which you can gradually move back to <code>kubectl</code>.
+To make working with <code>kubectl</code> more efficient, take advantage of aliases. Aliases can speed up your workflow and allow you to create fun, complex commands that are easily accessible. While there are many popular alias collections available (like this <a href="https://github.com/ahmetb/kubectl-aliases">GitHub repo</a>), I personally recommend creating your own. This can be both educational and rewarding. For example, you can create a simple alias like the following and add it to your <code>.bashrc</code> or <code>.zshrc</code> file:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ky<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    kubectl get <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> -o yaml | less
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
+<li><strong><a href="https://k9scli.io/">k9s</a></strong><br>
+According to the <a href="https://www.thoughtworks.com/en-de/radar/tools/summary/k9s">Thoughtworks 2024 Technology Radar</a>, k9s is a tool worth adopting. It provides a terminal-based visualization layer on top of <code>kubectl</code>. With <code>k9s</code>, it’s much faster to navigate through resources, search for details, view logs, and inspect events.
+That said, don’t get too dependent on it. While k9s is excellent for quick navigation, it doesn’t offer all the features of <code>kubectl</code>. Always make sure you know how to perform the same tasks using <code>kubectl</code>.</li>
+<li><strong><a href="https://k8slens.dev/">Lens</a></strong><br>
+While I haven’t personally used Lens, I’ve heard a lot of good things about it. Lens is a visualization tool for Kubernetes, offering an IDE-like experience on top of <code>kubectl</code>. Like k9s, it can be a helpful starting point for exploring and discovering Kubernetes. Once you’re comfortable, you can decide whether to stick with tools like Lens or transition fully to <code>kubectl</code>.</li>
+<li><strong>Other Tools</strong> - <strong><a href="https://cyphernet.es/">Cyphernet</a></strong>: Allows you to query Kubernetes resources using Cypher language. - <strong><a href="https://hub.steampipe.io/plugins/turbot/kubernetes">Steampipe</a></strong>: Enables querying Kubernetes resources with SQL.<br>
+These tools are fun to have in your toolkit but are not alternatives to replace <code>kubectl</code>. There was an interesting discussion on <a href="https://news.ycombinator.com/item?id=42427916">Hacker News</a> about these tools, which I think is worth reading.
+From my experience, the more senior and professional a developer is, the more they rely on <code>kubectl</code> and the less they depend on other tools.</li>
+</ul>
+<p>And finally, if you’re curious why it’s called <strong>k8s</strong>, here’s the reason:
+<img alt="alt text" loading="lazy" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F499e6a38-b05b-4c03-9cf3-149cc218dd13_551x140.png">
+Thank you for reading my blog! I’d love to hear about your experiences with learning Kubernetes and any suggestions you might have for resources or tools. Feel free to share your thoughts.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shayan Shafiee Moghadam</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

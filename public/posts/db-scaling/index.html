@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Database Scaling: A Self-Interview | Shayan Shafiee Moghadam</title>
+<meta name="keywords" content="">
+<meta name="description" content="In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:
+
+&ldquo;If you have a database and a query takes longer than required to run, what would you do?&rdquo;
+After discussing their response, we would follow up with:
+
+&ldquo;Now, what if the load on your database increases? What would you do now?&rdquo;
+This question helped assess whether the candidate could scale a database effectively without over-engineering. An immediate mention of CQRS in the first round was often a red flag—indicating they skipped simpler solutions and jumped to complex ones. We also valued candidates who asked clarifying questions before proposing solutions. Jumping into an answer without knowing the QPS (queries per second) or required response time was another bad sign.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/db-scaling/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/db-scaling/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shayan Shafiee Moghadam (Alt + H)">Shayan Shafiee Moghadam</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/resume/" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Side-Projects">
+                    <span>Side-Projects</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Database Scaling: A Self-Interview
+    </h1>
+    <div class="post-meta"><span title='2025-01-30 09:33:35 +0330 +0330'>January 30, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:</p>
+<blockquote>
+<p>&ldquo;If you have a database and a query takes longer than required to run, what would you do?&rdquo;</p></blockquote>
+<p>After discussing their response, we would follow up with:</p>
+<blockquote>
+<p>&ldquo;Now, what if the load on your database increases? What would you do now?&rdquo;</p></blockquote>
+<p>This question helped assess whether the candidate could scale a database effectively without over-engineering. An immediate mention of <strong>CQRS</strong> in the first round was often a red flag—indicating they skipped simpler solutions and jumped to complex ones. We also valued candidates who asked clarifying questions before proposing solutions. Jumping into an answer without knowing the <strong>QPS</strong> (queries per second) or required response time was another bad sign.</p>
+<p>Recently, I watched two insightful lectures by <a href="https://martin.kleppmann.com/">Martin Kleppmann</a>, the author of <em>Designing Data-Intensive Applications</em>:</p>
+<ul>
+<li><a href="https://martin.kleppmann.com/2015/11/05/database-inside-out-at-oredev.html">Turning the Database Inside-Out</a></li>
+<li><a href="https://martin.kleppmann.com/2015/11/06/streams-as-team-interface-at-oredev.html">Streams as the Team Interface</a></li>
+</ul>
+<p>These lectures structured many of the concepts I already knew about database scaling and highlighted the importance of <strong>immutable data</strong> and stream-based architectures like <strong>Apache Kafka</strong>. Inspired by this, I decided to answer the same interview question myself.</p>
+<hr>
+<h3 id="optimizing-queries-before-scaling"><strong>Optimizing Queries Before Scaling</strong><a hidden class="anchor" aria-hidden="true" href="#optimizing-queries-before-scaling">#</a></h3>
+<blockquote>
+<p><strong>Interviewer:</strong> Imagine you have a query:<br>
+<code>SELECT * FROM users WHERE email = 'something@somewhere.com'</code><br>
+and it is running slower than expected. What would you do?</p></blockquote>
+<p>My first step would be to gather more context:</p>
+<ul>
+<li>What is the expected vs. actual response time?</li>
+<li>Does this happen all the time or only during peak load?</li>
+<li>Could this be due to network latency instead of database performance?</li>
+</ul>
+<blockquote>
+<p><strong>Interviewer:</strong> It&rsquo;s not a network issue, and the slow response happens consistently.</p></blockquote>
+<p>The simplest optimization is <strong>adding an index</strong>. In this case, an index on the <code>email</code> column would reduce lookup time from <strong>O(n)</strong> to <strong>O(log n)</strong>.</p>
+<blockquote>
+<p><strong>Interviewer:</strong> This field already has an index.</p></blockquote>
+<p>If indexing isn’t the issue, I’d investigate whether the <strong>QPS has increased</strong>—high traffic can slow down even well-optimized queries.</p>
+<h2 id="handling-high-load"><strong>Handling High Load</strong><a hidden class="anchor" aria-hidden="true" href="#handling-high-load">#</a></h2>
+<blockquote>
+<p><strong>Interviewer:</strong> How would you determine if high QPS is the issue, and what would you do in each case?</p></blockquote>
+<p>I’d use <strong>monitoring tools</strong> to check query performance metrics. If <strong>QPS is stable</strong>, I’d analyze the query execution plan (<code>EXPLAIN &lt;query&gt;</code>) to identify bottlenecks.</p>
+<p>If <strong>high QPS is causing slow response times</strong>, the problem shifts from <strong>query optimization to database scaling</strong>. There are multiple solutions:</p>
+<h3 id="1-vertical-scaling"><strong>1. Vertical Scaling</strong><a hidden class="anchor" aria-hidden="true" href="#1-vertical-scaling">#</a></h3>
+<ul>
+<li>Simply add more CPU and RAM</li>
+</ul>
+<h3 id="2-read-replication-leader-follower-pattern"><strong>2. Read Replication (Leader-Follower Pattern)</strong><a hidden class="anchor" aria-hidden="true" href="#2-read-replication-leader-follower-pattern">#</a></h3>
+<ul>
+<li>We set up <strong>read replicas</strong> to offload read queries from the primary database.</li>
+<li>A load balancer distributes reads across the replicas.</li>
+<li>The primary database (leader) only handles writes, ensuring better write performance.</li>
+</ul>
+<h3 id="3-caching"><strong>3. Caching</strong><a hidden class="anchor" aria-hidden="true" href="#3-caching">#</a></h3>
+<ul>
+<li>Using <strong>Redis or Memcached</strong>, frequently accessed data is stored in memory.</li>
+<li>This significantly reduces database load and improves response times.</li>
+<li>However, cache invalidation is a challenge—when the database updates, cached values must be refreshed. One approach is integrating caching into the ORM layer, where cache keys are automatically invalidated on inserts, updates, and deletes. While this can streamline cache management and improve performance, it also introduces additional complexity, increasing maintenance overhead and making the codebase more error-prone.</li>
+</ul>
+<h3 id="4-materialized-views"><strong>4. Materialized Views</strong><a hidden class="anchor" aria-hidden="true" href="#4-materialized-views">#</a></h3>
+<ul>
+<li>Instead of recomputing expensive queries repeatedly, the database stores precomputed results in a <strong>materialized view</strong>.</li>
+<li>This improves performance, especially for complex queries.</li>
+<li>Unlike caching, materialized views are maintained by the database, reducing consistency issues.</li>
+</ul>
+<blockquote>
+<p><strong>Interviewer:</strong> In what order would you take these actions?</p></blockquote>
+<ol>
+<li><strong>Optimize the query and indexes.</strong></li>
+<li><strong>Introduce materialized views</strong> for expensive queries.</li>
+<li><strong>Evaluate vertical scaling</strong> (increasing CPU/RAM on the database server).</li>
+<li><strong>Implement replication</strong> to distribute read queries.</li>
+<li><strong>Use caching selectively</strong> to further reduce load.</li>
+</ol>
+<p>If these steps aren&rsquo;t enough, we move to more advanced scaling techniques.</p>
+<hr>
+<h2 id="scaling-further-beyond-a-single-database"><strong>Scaling Further: Beyond a Single Database</strong><a hidden class="anchor" aria-hidden="true" href="#scaling-further-beyond-a-single-database">#</a></h2>
+<blockquote>
+<p><strong>Interviewer:</strong> We&rsquo;ve optimized queries, added replication, caching, and materialized views. But we still need more scalability. What now?</p></blockquote>
+<p>If we hit hardware limits on a single database, we need <strong>horizontal scaling</strong>:</p>
+<h3 id="1-sharding-partitioning-data-across-multiple-databases"><strong>1. Sharding (Partitioning Data Across Multiple Databases)</strong><a hidden class="anchor" aria-hidden="true" href="#1-sharding-partitioning-data-across-multiple-databases">#</a></h3>
+<ul>
+<li>Data is split across multiple servers based on a key (e.g., user ID).</li>
+<li>Each shard operates independently, reducing the load on a single database.</li>
+<li><strong>Consistent hashing</strong> ensures that new shards can be added with minimal data redistribution.</li>
+</ul>
+<h3 id="2-cqrs-command-query-responsibility-segregation"><strong>2. CQRS (Command Query Responsibility Segregation)</strong><a hidden class="anchor" aria-hidden="true" href="#2-cqrs-command-query-responsibility-segregation">#</a></h3>
+<ul>
+<li>We separate read and write operations across different databases.</li>
+<li>Example: Writes go to <strong>PostgreSQL</strong>, while reads are served from <strong>Elasticsearch</strong>.</li>
+<li>Data synchronization is managed using <strong>Apache Kafka</strong>, ensuring eventual consistency.</li>
+</ul>
+<hr>
+<h2 id="final-thoughts"><strong>Final Thoughts</strong><a hidden class="anchor" aria-hidden="true" href="#final-thoughts">#</a></h2>
+<p>This was my answer to the database scaling interview question—essentially, a self-interview. I&rsquo;d love to hear other perspectives and solutions. Let me know your thoughts and feedback!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shayan Shafiee Moghadam</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

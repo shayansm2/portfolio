@@ -1,0 +1,43 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Shayan Shafiee Moghadam
+theme: PaperMod
+sectionPagesMenu: main
+
+menu:
+  main:
+    - name: Resume
+      url: /resume/
+      weight: 10
+    - name: Side-Projects
+      url: /projects/
+      weight: 0
+
+params:
+  homeInfoParams:
+    Title: About Me
+    Content: >
+      I'm a software engineer with over five years of experience building and scaling resilient systems—mostly in e-commerce and cloud platforms. My passion lies in designing robust architectures, improving development workflows, and helping teams work more efficiently through automation and thoughtful engineering.
+
+
+      I love taking ownership of complex challenges, collaborating across teams, and finding ways to make both products and processes better. Whether it's optimizing performance, leading technical initiatives, or mentoring teammates, I thrive on making a meaningful impact.
+
+
+      **Explore more**: [Resume](/resume) | [Side Projects](/projects) | [Posts](/posts)
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/shayansm2"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/shayan-shafiee-moghadam/"
+    - name: substack
+      url: "https://substack.com/@shayansm"
+    - name: mastodon
+      url: "https://mastodon.social/@shayansm"
+    - name: email
+      url: "mailto:shayan.shafiee.moghadam@gmail.com"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Shayan Shafiee Moghadam</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Shayan Shafiee Moghadam</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Apr 2025 20:32:21 +0330</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLM Transformers as ETL Transformers</title>
+      <link>http://localhost:1313/posts/llm-etl/</link>
+      <pubDate>Tue, 15 Apr 2025 20:32:21 +0330</pubDate>
+      <guid>http://localhost:1313/posts/llm-etl/</guid>
+      <description>&lt;p&gt;In a world full of AI hype—from chatbots that write code to flashy demo applications—I always felt that most tools were geared toward niche use cases like building QA bots or RAG agents. What really got me excited, however, was discovering a game-changing application for production-scale, non-AI companies: using LLMs to revolutionize ETL processes.&lt;/p&gt;
+&lt;p&gt;Traditionally, both the data source and the target had to be strictly structured. Data engineers spent countless hours writing code to map input data into a very specific schema. With LLMs the input data can be completely unstructured, and the model takes on the heavy lifting of transforming it into structured, usable data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Temporal VS DBOS </title>
+      <link>http://localhost:1313/posts/temporal-dbos/</link>
+      <pubDate>Wed, 05 Feb 2025 09:31:37 +0330</pubDate>
+      <guid>http://localhost:1313/posts/temporal-dbos/</guid>
+      <description>&lt;p&gt;I recently read &lt;a href=&#34;https://www.dbos.dev/blog/what-is-lightweight-durable-execution&#34;&gt;this article&lt;/a&gt; about a lightweight durable execution solution called DBOS. Meanwhile, I was working heavily with Temporal, a well-known open-source tool for durable executions. Technically, both serve the same purpose, but with major differences:&lt;/p&gt;
+&lt;p&gt;Temporal is heavyweight. To run it, you need a Temporal cluster, a database connected to the cluster, one or more Temporal workers, the Temporal UI, and finally, the Temporal SDK to trigger workflows from your application. On the other hand, DBOS is lightweight and requires only a database to store its data. The workflow runs within the same application that includes the DBOS library, whereas in Temporal, workflows run on separate resources called workers. Essentially, DBOS is a library, while Temporal is a full-fledged software solution that you interact with via its SDKs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Database Scaling: A Self-Interview</title>
+      <link>http://localhost:1313/posts/db-scaling/</link>
+      <pubDate>Thu, 30 Jan 2025 09:33:35 +0330</pubDate>
+      <guid>http://localhost:1313/posts/db-scaling/</guid>
+      <description>&lt;p&gt;In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If you have a database and a query takes longer than required to run, what would you do?&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;After discussing their response, we would follow up with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Now, what if the load on your database increases? What would you do now?&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This question helped assess whether the candidate could scale a database effectively without over-engineering. An immediate mention of &lt;strong&gt;CQRS&lt;/strong&gt; in the first round was often a red flag—indicating they skipped simpler solutions and jumped to complex ones. We also valued candidates who asked clarifying questions before proposing solutions. Jumping into an answer without knowing the &lt;strong&gt;QPS&lt;/strong&gt; (queries per second) or required response time was another bad sign.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blue-Collar Tech Worker</title>
+      <link>http://localhost:1313/posts/blue-collar/</link>
+      <pubDate>Tue, 21 Jan 2025 09:10:06 +0330</pubDate>
+      <guid>http://localhost:1313/posts/blue-collar/</guid>
+      <description>&lt;p&gt;I recently read this text on social media, and here are my thoughts. I both agree and disagree with it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; loading=&#34;lazy&#34; src=&#34;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4e14d498-87e9-42ea-be39-12b2fd136f40_1116x1090.jpeg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;But first, let’s align on the terminology. Based on the definitions in this text, a &amp;ldquo;real&amp;rdquo; software engineer is someone who builds tools and understands how they work. On the other hand, someone who reads the documentation of tools and connects them together is called a &amp;ldquo;blue-collar tech worker.&amp;rdquo; While one could argue about whether this term is accurate or not, let’s go with &amp;ldquo;blue-collar tech worker&amp;rdquo; to make it easier to discuss the differences.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Personal Journey into Learning Kubernetes</title>
+      <link>http://localhost:1313/posts/k8s/</link>
+      <pubDate>Mon, 16 Dec 2024 09:14:38 +0330</pubDate>
+      <guid>http://localhost:1313/posts/k8s/</guid>
+      <description>&lt;p&gt;For the last three months, I’ve been diving deep into Kubernetes as part of my new job, and I decided to write this blog to share my journey in learning Kubernetes. If you work in a DevOps role or your company operates on Kubernetes, understanding it inside and out is essential. However, as a software engineer, I also encourage every other software engineer to learn Kubernetes. Here’s why:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;The Rise of No-Ops&lt;/strong&gt;&lt;br&gt;
+With the growing popularity of cloud solutions, there’s a noticeable shift from DevOps to No-Ops. Catching this trend early can put you ahead of the curve.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Transformation to Generalists&lt;/strong&gt;&lt;br&gt;
+The job market is evolving, thanks to advancements in GenAI and LLMs. Specialized roles like &amp;ldquo;Django Back-End Developer,&amp;rdquo; &amp;ldquo;React Front-End Developer,&amp;rdquo; or &amp;ldquo;DevOps Specialist&amp;rdquo; are increasingly giving way to more generalist roles. Today, I see more &amp;ldquo;full-function software engineers&amp;rdquo; whose responsibilities include designing solutions, coding both client and server sides, configuring builds, deploying to production, and delivering the final product. Based on this, I believe it’s becoming crucial for software engineers to develop cloud and Kubernetes skills.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A Masterclass in Design and Architecture&lt;/strong&gt;&lt;br&gt;
+Kubernetes&amp;rsquo; design is elegant and showcases some of the best practices in software architecture and design patterns. When you explore its components, it’s like watching Lego pieces come together to form a self-reliable infrastructure. The way Kubernetes uses separation of concerns and well-defined abstractions is inspiring—it’s no surprise that it has become the new standard for cloud and DevOps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All that aside, these are the resources I found most useful for learning and working with Kubernetes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dagger CI</title>
+      <link>http://localhost:1313/posts/dagger/</link>
+      <pubDate>Tue, 22 Oct 2024 09:18:06 +0330</pubDate>
+      <guid>http://localhost:1313/posts/dagger/</guid>
+      <description>&lt;p&gt;I was recently introduced to &lt;a href=&#34;https://dagger.io/&#34;&gt;dagger.io&lt;/a&gt; by my tech lead. Dagger is a CI tool created by Solomon Hykes, who is also the founder of Docker. I listened to his interview on the &lt;a href=&#34;https://kubernetespodcast.com/episode/236-dagger/&#34;&gt;kubernetes podcast&lt;/a&gt; and several aspects about the motivation behind Dagger caught my attention.&lt;/p&gt;
+&lt;p&gt;The most interesting aspect of Dagger is its objective to provide a separation of concerns. These days, the CI code and configuration you write are often tightly coupled with the specific technology or infrastructure you are using. For example, gitlab-ci.yaml files are tailored for GitLab runners, and GitHub Actions has its own unique file format. Dagger aims to unify CI pipeline configurations and code, making them executable anywhere—similar to Docker.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
