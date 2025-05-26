@@ -1,6 +1,5 @@
 +++
 date = '2025-01-21T09:10:06+03:30'
-draft = true
 title = 'Blue-Collar Tech Worker'
 +++
 

@@ -1,6 +1,5 @@
 +++
 date = '2024-10-22T09:18:06+03:30'
-draft = true
 title = 'Dagger CI'
 +++
 

@@ -1,6 +1,5 @@
 +++
 date = '2024-12-16T09:14:38+03:30'
-draft = true
 title = 'My Personal Journey into Learning Kubernetes'
 +++
 
