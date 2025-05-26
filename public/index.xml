@@ -193,7 +193,8 @@
       <link>http://localhost:1313/resume/</link>
       <pubDate>Sat, 03 May 2025 23:56:34 +0330</pubDate>
       <guid>http://localhost:1313/resume/</guid>
-      <description>&lt;h1 id=&#34;work-experience&#34;&gt;WORK EXPERIENCE&lt;/h1&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Prefer a PDF version? &lt;a href=&#34;https://github.com/shayansm2/portfolio/releases/download/resume/resume_shayanShafieeMoghadam.pdf&#34;&gt;Download my resume&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;work-experience&#34;&gt;WORK EXPERIENCE&lt;/h1&gt;
 &lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
   &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
     &lt;img src=&#34;https://media.licdn.com/dms/image/v2/C4D0BAQFIOmQcwTXY5g/company-logo_100_100/company-logo_100_100/0/1630513308234/hamravesh_logo?e=1752710400&amp;v=beta&amp;t=TITd5IY69lWY8N6JUJToOIlKRcIlTRVMNJ6znd1pQV4&#34; alt=&#34;Company Logo&#34; 

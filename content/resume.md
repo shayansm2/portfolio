@@ -3,6 +3,8 @@ date = '2025-05-03T23:56:34+03:30'
 title = 'Resume'
 +++
 
+**Prefer a PDF version? [Download my resume](https://github.com/shayansm2/portfolio/releases/download/resume/resume_shayanShafieeMoghadam.pdf)**
+
 # WORK EXPERIENCE
 
 <div class="custom-html" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;">
