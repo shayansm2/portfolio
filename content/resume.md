@@ -50,7 +50,8 @@ title = 'Resume'
   </div>
 </div>
 
-- nothing yet
+- Integrated the existing system with Zoho CRM, streamlining customer relationship follow-ups and reducing manual data entry, improving sales team efficiency.
+- Implemented event-driven architecture in the Laravel-based project, reducing average request processing time and decoupling business logic, which accelerated feature development.
 
 <div class="custom-html" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;">
   <div style="display: flex; align-items: center; gap: 15px;">
