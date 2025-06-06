@@ -33,7 +33,7 @@ _Processes GitHub event data to visualize contributor activity, PR trends, and r
 _A curated archive of LeetCode challenges solved with a focus on algorithmic efficiency and clean code._
 
 **Languages:** Python, Golang, Java, PHP, JavaScript  
-**→ [View on GitHub](https://github.com/shayansm2/leetcode-solutions)**
+**→ [Site](https://shayansm2.github.io/leetcode-solutions/), [View on GitHub](https://github.com/shayansm2/leetcode-solutions)**
 
 ---
 

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Database Index Internals | Shayan Shafiee Moghadam</title>
+<meta name="keywords" content="">
+<meta name="description" content="I recently read the 3rd chapter of the Designing Data-Intensive Applications book, and this blog aims to share my take on the internals of database indexes and how they have been designed. If you haven&rsquo;t read this book—especially the 3rd chapter—I fully encourage you to check it out, as it is an amazing read. However, you can also go through this blog, where I’ve prepared some diagrams to show the full picture all at once. As the old saying goes, a picture is worth a thousand words. I hope you enjoy it.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/db-index/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/db-index/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shayan Shafiee Moghadam (Alt + H)">Shayan Shafiee Moghadam</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/resume/" title="Resume">
+                    <span>Resume</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Side-Projects">
+                    <span>Side-Projects</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Database Index Internals
+    </h1>
+    <div class="post-meta"><span title='2025-06-06 23:16:03 +0330 +0330'>June 6, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I recently read the 3rd chapter of the <em>Designing Data-Intensive Applications</em> book, and this blog aims to share my take on the internals of database indexes and how they have been designed. If you haven&rsquo;t read this book—especially the 3rd chapter—I fully encourage you to check it out, as it is an amazing read. However, you can also go through this blog, where I’ve prepared some diagrams to show the full picture all at once. As the old saying goes, <em>a picture is worth a thousand words.</em> I hope you enjoy it.</p>
+<p><img alt="alt text" loading="lazy" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ed43dea-8115-4260-92ef-372dce365538_748x982.png"></p>
+<h1 id="primary-index">primary index<a hidden class="anchor" aria-hidden="true" href="#primary-index">#</a></h1>
+<p>We store data in databases—it can be a row in a relational database, a JSON document in a document database, or any other form. The schema of the value isn&rsquo;t important here—it could be rows, JSON, or any other format. What matters is that you store the data so you can retrieve it later. The thing you use to get back your stored data is called a <strong>key</strong>. In relational databases, this is also called a <strong>primary key</strong>. The database’s duty is to provide a mechanism to retrieve the value based on a given key. <em>Index</em> is the term used for the building blocks that a database uses to retrieve values by their keys.</p>
+<h2 id="log-structured-storage-using-hash-index">log-structured storage, using hash index<a hidden class="anchor" aria-hidden="true" href="#log-structured-storage-using-hash-index">#</a></h2>
+<p>The first simple solution is to make an append-only file and append every pair of keys and values to that file. The read mechanism then scans the whole file and returns the last existing value for the key. The problem is, this can get very slow as the database grows in size because it needs to scan everything. On the other hand, writes are pretty fast since they are sequential rather than random.
+To tackle this, we can use memory to store keys and references to the last value on disk. This speeds up reads and adds only a small cost to writes (updating the memory). This is called a <strong>hash index</strong>. One issue with this approach is that the database size keeps growing, as it doesn’t remove old values.
+To improve on that, we can <strong>segment</strong> the database. Each segment stores key-value pairs up to a certain size, and once full, a new segment is created. A background process called <strong>compaction</strong> scans segments, keeps only the latest values, and removes outdated ones. This way, the database doesn&rsquo;t grow indefinitely. Each segment has its own hash index, and reads check the most recent segment first, moving backward if the key isn’t found.
+To ensure <strong>durability</strong>, we can generate hash indexes by scanning segments and storing them in memory at startup. But this makes boot-up time slow. A better approach is to periodically store <strong>snapshots</strong> of the hash index on disk.
+One major issue with this architecture is that it can only hold as many keys as fit in memory. It&rsquo;s useful when the number of keys is low but values are frequently updated. Examples of databases using this design include <strong>Bitcask</strong>, <strong>Riak</strong>, <strong>BadgerDB</strong>, and <strong>Apache Pulsar BookKeeper</strong>. Another downside is that range queries (like <code>a &lt; key &lt; b</code>) are very slow because you need to scan all segments.
+<img alt="alt text" loading="lazy" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F09170c77-f26e-4f06-821f-6934d5b2fbf5_2144x1004.png"></p>
+<h2 id="sstable-and-lsm-tree">SSTable and LSM Tree<a hidden class="anchor" aria-hidden="true" href="#sstable-and-lsm-tree">#</a></h2>
+<p>The main limitation of the previous approach was that database capacity was limited by memory size, since we stored all keys in memory. This approach improves that by storing only a selected set of keys in memory, assuming the keys are <strong>sorted on disk</strong>. To find a key, you locate the greatest key less than or equal to it, and the smallest key greater than it, and scan the range in between.
+A <strong>memtable</strong> is a balanced tree data structure (e.g. red-black or AVL tree) stored in memory. Each write goes to the memtable. When the memtable reaches a size threshold, it&rsquo;s flushed to disk in a sorted format, and a new memtable is created. Reads first check the memtable, then move through disk segments from most recent to oldest.
+Like before, it uses <strong>compaction</strong> to reduce disk size. Since data in segments is sorted, <strong>merge sort</strong> can be used to compact and merge them efficiently.
+If a key does <strong>not exist</strong>, you would still need to check the memtable and all segments to be sure. This is improved by adding a <strong>Bloom filter</strong>—a probabilistic data structure that tells whether a key definitely does <em>not</em> exist or <em>might</em> exist. This helps skip unnecessary scans. Note that bloom filters have <strong>false positives</strong>, but no false negatives.
+Durability is added by periodically storing memtable <strong>snapshots</strong> to disk. On crash, you can reload the snapshot into memory.
+<strong>LSM trees</strong> are popular for <strong>write-heavy databases</strong>. Examples include <strong>Cassandra</strong>, <strong>RocksDB</strong>, <strong>HBase</strong>, <strong>LevelDB</strong>, <strong>ScyllaDB</strong>, and <strong>InfluxDB</strong>. The key advantage over B-trees (next section) is that writes happen in memory and are flushed to disk in the background, making writes faster. Reads, however, are slower because they require checking multiple locations (memtable + segments). Compared to the log-structured hash index, LSM trees solve the memory size limitation and support range queries thanks to sorted storage.
+<img alt="alt text" loading="lazy" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74bf0f50-27ab-4d38-b9d0-fd0b37f41546_1978x1236.png"></p>
+<h2 id="b-trees">B-trees<a hidden class="anchor" aria-hidden="true" href="#b-trees">#</a></h2>
+<p>Another common data structure used in databases is <strong>Balanced Trees</strong>. Each node (called a <strong>page</strong>) is stored at a fixed disk location. Each page contains <code>n+1</code> keys and <code>n</code> references to child nodes (except for leaf nodes). A child node’s keys are between its parent’s adjacent keys. Searching in an <code>n</code>-node B-tree has a time complexity of <code>O(log n)</code>, which is fast.
+The downside is that even small changes require <strong>overwriting the entire page</strong> on disk. To make writes crash-resilient, databases use a <strong>WAL (Write-Ahead Log)</strong>—writes go here first, then to the B-tree. An alternative is <strong>copy-on-write</strong>, where a new page is written and then linked, instead of modifying the original (used in filesystems like <strong>btrfs</strong>).
+Compared to LSM trees: - <strong>B-trees</strong> are generally <strong>faster for reads</strong>, as each key exists in only one place. - <strong>Slower for writes</strong> due to random access, full-page rewrites, and dual writes (WAL + page). - <strong>B-trees</strong> offer <strong>better transactional semantics</strong>. - B-trees are ideal for <strong>read-heavy workloads</strong>
+Famous databases that use B-trees include <strong>PostgreSQL</strong>, <strong>MySQL (InnoDB)</strong>, <strong>SQLite</strong>, <strong>Oracle</strong>, and <strong>SQL Server</strong>.
+<img alt="alt text" loading="lazy" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F38617e95-c2bc-449d-9df1-b220220514e8_2136x1116.png"></p>
+<h1 id="secondary-index">secondary index<a hidden class="anchor" aria-hidden="true" href="#secondary-index">#</a></h1>
+<p>So far, we&rsquo;ve covered how <strong>primary indexes</strong> work and how they help find items based on exact key matches or range queries. These indexes are designed to retrieve data using the <strong>primary key</strong> (such as an <code>id</code> or unique identifier).</p>
+<p>However, there are many real-world scenarios where we need to look up records based on <strong>attributes other than the primary key</strong>. This is where <strong>secondary indexes</strong> come in.</p>
+<p>Here are a few examples:</p>
+<ul>
+<li>Finding a user by their <strong>email address</strong> (a unique secondary index)</li>
+<li>Fetching all <strong>orders</strong> associated with a user ID (a foreign key index)</li>
+<li>Retrieving all <strong>products</strong> marked as out-of-inventory (a single-column index)</li>
+<li>Searching for people by <strong>first name and last name</strong> together (a concatenated index)</li>
+<li>Locating the <strong>closest restaurant</strong> to a given location using latitude and longitude (multi-dimensional index)</li>
+<li>Matching a user query to the most relevant content or string (full-text search or fuzzy matching index)</li>
+</ul>
+<p>Some of these use cases can be handled using data structures similar to primary indexes. For example:</p>
+<ul>
+<li>A <strong>unique secondary index</strong> behaves much like a primary index but is built on a different column (like <code>email</code>).</li>
+<li>A <strong>column index</strong> can store <strong>multiple matching entries</strong> for a given value. This differs from a primary index, which assumes uniqueness. Instead of pointing to a single row, it returns a <strong>list of matching rows</strong>.</li>
+</ul>
+<p>Others require different structures or strategies entirely:</p>
+<ul>
+<li><strong>Foreign key indexes</strong> may point from one table’s column to another table’s primary key.</li>
+<li><strong>Geospatial queries</strong> (e.g., nearest neighbors) often rely on <strong>R-trees</strong> which are better suited for multi-dimensional data.</li>
+<li><strong>Full-text search</strong> typically uses <strong>inverted indexes</strong> or <strong>fuzzy indexing</strong> techniques to match text efficiently, even with typos or variations.</li>
+</ul>
+<p>All in all, understanding how different indexing models work—whether it&rsquo;s log-structured storage with hash indexes, SSTables with LSM Trees, or B-trees—gives you a deeper appreciation of the trade-offs databases make under the hood. Each approach is designed with different performance characteristics in mind, depending on the read/write patterns and use cases. Secondary indexes build on these foundations to support more flexible queries. I hope this post helped shed light on these internal mechanisms, and maybe inspired you to dig deeper into how your favorite databases really work.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Shayan Shafiee Moghadam</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

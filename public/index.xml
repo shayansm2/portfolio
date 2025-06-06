@@ -6,8 +6,15 @@
     <description>Recent content on Shayan Shafiee Moghadam</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 May 2025 09:55:06 +0330</lastBuildDate>
+    <lastBuildDate>Fri, 06 Jun 2025 23:16:03 +0330</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database Index Internals</title>
+      <link>http://localhost:1313/posts/db-index/</link>
+      <pubDate>Fri, 06 Jun 2025 23:16:03 +0330</pubDate>
+      <guid>http://localhost:1313/posts/db-index/</guid>
+      <description>&lt;p&gt;I recently read the 3rd chapter of the &lt;em&gt;Designing Data-Intensive Applications&lt;/em&gt; book, and this blog aims to share my take on the internals of database indexes and how they have been designed. If you haven&amp;rsquo;t read this book—especially the 3rd chapter—I fully encourage you to check it out, as it is an amazing read. However, you can also go through this blog, where I’ve prepared some diagrams to show the full picture all at once. As the old saying goes, &lt;em&gt;a picture is worth a thousand words.&lt;/em&gt; I hope you enjoy it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Journey</title>
       <link>http://localhost:1313/journey/</link>
@@ -193,7 +200,7 @@
       <link>http://localhost:1313/resume/</link>
       <pubDate>Sat, 03 May 2025 23:56:34 +0330</pubDate>
       <guid>http://localhost:1313/resume/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Prefer a PDF version? &lt;a href=&#34;https://github.com/shayansm2/portfolio/releases/download/resume/resume_shayanShafieeMoghadam.pdf&#34;&gt;Download my resume&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Prefer a PDF version? &lt;a href=&#34;https://github.com/shayansm2/shayansm2.github.io/releases/download/resume/resume_shayanShafieeMoghadam.pdf&#34;&gt;Download my resume&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;work-experience&#34;&gt;WORK EXPERIENCE&lt;/h1&gt;
 &lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
   &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
@@ -235,7 +242,8 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;nothing yet&lt;/li&gt;
+&lt;li&gt;Integrated the existing system with Zoho CRM, streamlining customer relationship follow-ups and reducing manual data entry, improving sales team efficiency.&lt;/li&gt;
+&lt;li&gt;Implemented event-driven architecture in the Laravel-based project, reducing average request processing time and decoupling business logic, which accelerated feature development.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;custom-html&#34; style=&#34;display: flex; align-items: center; justify-content: space-between; padding: 10px 0; font-family: Arial, sans-serif;&#34;&gt;
   &lt;div style=&#34;display: flex; align-items: center; gap: 15px;&#34;&gt;
