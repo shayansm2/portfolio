@@ -128,6 +128,34 @@
 
 </div>
   </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://substackcdn.com/image/fetch/$s_!5iw_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74bf0f50-27ab-4d38-b9d0-fd0b37f41546_1978x1236.png" alt="">
+        
+</figure><div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#primary-index" aria-label="primary index">primary index</a><ul>
+                        
+                <li>
+                    <a href="#log-structured-storage-using-hash-index" aria-label="log-structured storage, using hash index">log-structured storage, using hash index</a></li>
+                <li>
+                    <a href="#sstable-and-lsm-tree" aria-label="SSTable and LSM Tree">SSTable and LSM Tree</a></li>
+                <li>
+                    <a href="#b-trees" aria-label="B-trees">B-trees</a></li></ul>
+                </li>
+                <li>
+                    <a href="#secondary-index" aria-label="secondary index">secondary index</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><p>I recently read the 3rd chapter of the <em>Designing Data-Intensive Applications</em> book, and this blog aims to share my take on the internals of database indexes and how they have been designed. If you haven&rsquo;t read this book—especially the 3rd chapter—I fully encourage you to check it out, as it is an amazing read. However, you can also go through this blog, where I’ve prepared some diagrams to show the full picture all at once. As the old saying goes, <em>a picture is worth a thousand words.</em> I hope you enjoy it.</p>
 <p><img alt="alt text" loading="lazy" src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ed43dea-8115-4260-92ef-372dce365538_748x982.png"></p>
 <h1 id="primary-index">primary index<a hidden class="anchor" aria-hidden="true" href="#primary-index">#</a></h1>

@@ -134,6 +134,47 @@ This question helped assess whether the candidate could scale a database effecti
 
 </div>
   </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://assets.bytebytego.com/diagrams/0161-database-scaling-cheatsheet.png" alt="">
+        
+</figure><div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul><ul>
+                <li>
+                    <a href="#optimizing-queries-before-scaling" aria-label="Optimizing Queries Before Scaling">Optimizing Queries Before Scaling</a></li></ul>
+                    
+                <li>
+                    <a href="#handling-high-load" aria-label="Handling High Load">Handling High Load</a><ul>
+                        
+                <li>
+                    <a href="#1-vertical-scaling" aria-label="1. Vertical Scaling">1. Vertical Scaling</a></li>
+                <li>
+                    <a href="#2-read-replication-leader-follower-pattern" aria-label="2. Read Replication (Leader-Follower Pattern)">2. Read Replication (Leader-Follower Pattern)</a></li>
+                <li>
+                    <a href="#3-caching" aria-label="3. Caching">3. Caching</a></li>
+                <li>
+                    <a href="#4-materialized-views" aria-label="4. Materialized Views">4. Materialized Views</a></li></ul>
+                </li>
+                <li>
+                    <a href="#scaling-further-beyond-a-single-database" aria-label="Scaling Further: Beyond a Single Database">Scaling Further: Beyond a Single Database</a><ul>
+                        
+                <li>
+                    <a href="#1-sharding-partitioning-data-across-multiple-databases" aria-label="1. Sharding (Partitioning Data Across Multiple Databases)">1. Sharding (Partitioning Data Across Multiple Databases)</a></li>
+                <li>
+                    <a href="#2-cqrs-command-query-responsibility-segregation" aria-label="2. CQRS (Command Query Responsibility Segregation)">2. CQRS (Command Query Responsibility Segregation)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#final-thoughts" aria-label="Final Thoughts">Final Thoughts</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><p>In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:</p>
 <blockquote>
 <p>&ldquo;If you have a database and a query takes longer than required to run, what would you do?&rdquo;</p></blockquote>

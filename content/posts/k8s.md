@@ -1,6 +1,8 @@
 +++
 date = '2024-12-16T09:14:38+03:30'
 title = 'My Personal Journey into Learning Kubernetes'
+[cover]
+image = "https://cdn2.hubspot.net/hubfs/3917309/blog/new/Safely-Removing-Pods-From-a-Kubernetes-Node/Safely-Removing-Pods-From-a-Kubernetes-Node.jpg"
 +++
 
 For the last three months, I’ve been diving deep into Kubernetes as part of my new job, and I decided to write this blog to share my journey in learning Kubernetes. If you work in a DevOps role or your company operates on Kubernetes, understanding it inside and out is essential. However, as a software engineer, I also encourage every other software engineer to learn Kubernetes. Here’s why:

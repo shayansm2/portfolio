@@ -1,6 +1,10 @@
 +++
 date = '2025-01-30T09:33:35+03:30'
 title = 'Database Scaling: A Self-Interview'
+showToC = true
+TocOpen = true
+[cover]
+image = "https://assets.bytebytego.com/diagrams/0161-database-scaling-cheatsheet.png"
 +++
 
 In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:

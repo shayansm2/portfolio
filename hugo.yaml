@@ -14,15 +14,22 @@ menu:
       weight: 0
 
 params:
-  homeInfoParams:
-    Title: About Me
-    Content: >
-      I'm a software engineer with over five years of experience building and scaling resilient systems—mostly in e-commerce and cloud platforms. My passion lies in designing robust architectures, improving development workflows, and helping teams work more efficiently through automation and thoughtful engineering.
-
-
-      I love taking ownership of complex challenges, collaborating across teams, and finding ways to make both products and processes better. Whether it's optimizing performance, leading technical initiatives, or mentoring teammates, I thrive on making a meaningful impact.
-      <br><br>
-      **Explore more**: [Resume](resume/) | [Side Projects](projects/) | [Posts](posts/)
+  profileMode:
+    enabled: true
+    title: "Shayan Shafiee Moghadam"
+    subtitle: >
+      <p align="left">I'm a software engineer with over five years of experience building and scaling resilient systems—mostly in e-commerce and cloud platforms. My passion lies in designing robust architectures, improving development workflows, and helping teams work more efficiently through automation and thoughtful engineering.</p>
+      <p align="left">I love taking ownership of complex challenges, collaborating across teams, and finding ways to make both products and processes better. Whether it's optimizing performance, leading technical initiatives, or mentoring teammates, I thrive on making a meaningful impact.</p>
+    imageUrl: "https://avatars.githubusercontent.com/u/73420694?v=4"
+    imageWidth: 180
+    imageHeight: 180
+    buttons:
+      - name: Resume
+        url: "/resume"
+      - name: Posts
+        url: "/posts"
+      - name: Side Projects
+        url: "/projects"
 
   socialIcons:
     - name: github
@@ -35,6 +42,8 @@ params:
       url: "https://mastodon.social/@shayansm"
     - name: email
       url: "mailto:shayan.shafiee.moghadam@gmail.com"
+    - name: cv
+      url: "https://github.com/shayansm2/shayansm2.github.io/releases/download/resume/resume_shayanShafieeMoghadam.pdf"
 
 markup:
   goldmark:

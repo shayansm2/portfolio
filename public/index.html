@@ -118,18 +118,13 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>About Me</h1>
-    </header>
-    <div class="entry-content">
-        <p>I&rsquo;m a software engineer with over five years of experience building and scaling resilient systems—mostly in e-commerce and cloud platforms. My passion lies in designing robust architectures, improving development workflows, and helping teams work more efficiently through automation and thoughtful engineering.</p>
-<p>I love taking ownership of complex challenges, collaborating across teams, and finding ways to make both products and processes better. Whether it&rsquo;s optimizing performance, leading technical initiatives, or mentoring teammates, I thrive on making a meaningful impact. <br><br> <strong>Explore more</strong>: <a href="resume/">Resume</a> | <a href="projects/">Side Projects</a> | <a href="posts/">Posts</a></p>
-
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
+<main class="main"><div class="profile">
+    <div class="profile_inner">
+        <img draggable="false" src="https://avatars.githubusercontent.com/u/73420694?v=4" alt="profile image" title=""
+            height="180" width="180" />
+        <h1>Shayan Shafiee Moghadam</h1>
+        <span><p align="left">I'm a software engineer with over five years of experience building and scaling resilient systems—mostly in e-commerce and cloud platforms. My passion lies in designing robust architectures, improving development workflows, and helping teams work more efficiently through automation and thoughtful engineering.</p> <p align="left">I love taking ownership of complex challenges, collaborating across teams, and finding ways to make both products and processes better. Whether it's optimizing performance, leading technical initiatives, or mentoring teammates, I thrive on making a meaningful impact.</p>
+</span><div class="social-icons" >
     <a href="https://github.com/shayansm2" target="_blank" rel="noopener noreferrer me"
         title="Github">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -175,113 +170,39 @@
     <polyline points="22,6 12,13 2,6"></polyline>
 </svg>
     </a>
+    <a href="https://github.com/shayansm2/shayansm2.github.io/releases/download/resume/resume_shayanShafieeMoghadam.pdf" target="_blank" rel="noopener noreferrer me"
+        title="Cv">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z" />
+    <path d="M9 13h6" />
+    <path d="M9 17h3" />
+    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+</svg>
+    </a>
 </div>
 
-    </footer>
-</article>
+        <div class="buttons">
+            <a class="button" href="/resume" rel="noopener" title="Resume">
+                <span class="button-inner">
+                    Resume
+                </span>
+            </a>
+            <a class="button" href="/posts" rel="noopener" title="Posts">
+                <span class="button-inner">
+                    Posts
+                </span>
+            </a>
+            <a class="button" href="/projects" rel="noopener" title="Side Projects">
+                <span class="button-inner">
+                    Side Projects
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Database Index Internals
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I recently read the 3rd chapter of the Designing Data-Intensive Applications book, and this blog aims to share my take on the internals of database indexes and how they have been designed. If you haven’t read this book—especially the 3rd chapter—I fully encourage you to check it out, as it is an amazing read. However, you can also go through this blog, where I’ve prepared some diagrams to show the full picture all at once. As the old saying goes, a picture is worth a thousand words. I hope you enjoy it.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-06-06 23:16:03 +0330 +0330'>June 6, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Database Index Internals" href="http://localhost:1313/posts/db-index/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">LLM Transformers as ETL Transformers
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>In a world full of AI hype—from chatbots that write code to flashy demo applications—I always felt that most tools were geared toward niche use cases like building QA bots or RAG agents. What really got me excited, however, was discovering a game-changing application for production-scale, non-AI companies: using LLMs to revolutionize ETL processes.
-Traditionally, both the data source and the target had to be strictly structured. Data engineers spent countless hours writing code to map input data into a very specific schema. With LLMs the input data can be completely unstructured, and the model takes on the heavy lifting of transforming it into structured, usable data.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-04-15 20:32:21 +0330 +0330'>April 15, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to LLM Transformers as ETL Transformers" href="http://localhost:1313/posts/llm-etl/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Temporal VS DBOS 
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I recently read this article about a lightweight durable execution solution called DBOS. Meanwhile, I was working heavily with Temporal, a well-known open-source tool for durable executions. Technically, both serve the same purpose, but with major differences:
-Temporal is heavyweight. To run it, you need a Temporal cluster, a database connected to the cluster, one or more Temporal workers, the Temporal UI, and finally, the Temporal SDK to trigger workflows from your application. On the other hand, DBOS is lightweight and requires only a database to store its data. The workflow runs within the same application that includes the DBOS library, whereas in Temporal, workflows run on separate resources called workers. Essentially, DBOS is a library, while Temporal is a full-fledged software solution that you interact with via its SDKs.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-02-05 09:31:37 +0330 +0330'>February 5, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Temporal VS DBOS " href="http://localhost:1313/posts/temporal-dbos/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Database Scaling: A Self-Interview
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>In my previous job, I conducted multiple technical interviews, and one of the key questions we asked candidates was:
-“If you have a database and a query takes longer than required to run, what would you do?”
-After discussing their response, we would follow up with:
-“Now, what if the load on your database increases? What would you do now?”
-This question helped assess whether the candidate could scale a database effectively without over-engineering. An immediate mention of CQRS in the first round was often a red flag—indicating they skipped simpler solutions and jumped to complex ones. We also valued candidates who asked clarifying questions before proposing solutions. Jumping into an answer without knowing the QPS (queries per second) or required response time was another bad sign.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-30 09:33:35 +0330 +0330'>January 30, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Database Scaling: A Self-Interview" href="http://localhost:1313/posts/db-scaling/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Blue-Collar Tech Worker
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I recently read this text on social media, and here are my thoughts. I both agree and disagree with it.
-But first, let’s align on the terminology. Based on the definitions in this text, a “real” software engineer is someone who builds tools and understands how they work. On the other hand, someone who reads the documentation of tools and connects them together is called a “blue-collar tech worker.” While one could argue about whether this term is accurate or not, let’s go with “blue-collar tech worker” to make it easier to discuss the differences.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-21 09:10:06 +0330 +0330'>January 21, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Blue-Collar Tech Worker" href="http://localhost:1313/posts/blue-collar/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">My Personal Journey into Learning Kubernetes
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>For the last three months, I’ve been diving deep into Kubernetes as part of my new job, and I decided to write this blog to share my journey in learning Kubernetes. If you work in a DevOps role or your company operates on Kubernetes, understanding it inside and out is essential. However, as a software engineer, I also encourage every other software engineer to learn Kubernetes. Here’s why:
-The Rise of No-Ops
-With the growing popularity of cloud solutions, there’s a noticeable shift from DevOps to No-Ops. Catching this trend early can put you ahead of the curve. The Transformation to Generalists
-The job market is evolving, thanks to advancements in GenAI and LLMs. Specialized roles like “Django Back-End Developer,” “React Front-End Developer,” or “DevOps Specialist” are increasingly giving way to more generalist roles. Today, I see more “full-function software engineers” whose responsibilities include designing solutions, coding both client and server sides, configuring builds, deploying to production, and delivering the final product. Based on this, I believe it’s becoming crucial for software engineers to develop cloud and Kubernetes skills. A Masterclass in Design and Architecture
-Kubernetes’ design is elegant and showcases some of the best practices in software architecture and design patterns. When you explore its components, it’s like watching Lego pieces come together to form a self-reliable infrastructure. The way Kubernetes uses separation of concerns and well-defined abstractions is inspiring—it’s no surprise that it has become the new standard for cloud and DevOps. All that aside, these are the resources I found most useful for learning and working with Kubernetes.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-12-16 09:14:38 +0330 +0330'>December 16, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to My Personal Journey into Learning Kubernetes" href="http://localhost:1313/posts/k8s/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Dagger CI
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I was recently introduced to dagger.io by my tech lead. Dagger is a CI tool created by Solomon Hykes, who is also the founder of Docker. I listened to his interview on the kubernetes podcast and several aspects about the motivation behind Dagger caught my attention.
-The most interesting aspect of Dagger is its objective to provide a separation of concerns. These days, the CI code and configuration you write are often tightly coupled with the specific technology or infrastructure you are using. For example, gitlab-ci.yaml files are tailored for GitLab runners, and GitHub Actions has its own unique file format. Dagger aims to unify CI pipeline configurations and code, making them executable anywhere—similar to Docker.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-10-22 09:18:06 +0330 +0330'>October 22, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Dagger CI" href="http://localhost:1313/posts/dagger/"></a>
-</article>
     </main>
     
 <footer class="footer">
