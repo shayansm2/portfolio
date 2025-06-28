@@ -5,7 +5,7 @@ showToC = true
 TocOpen = true
 
 [cover]
-image = "https://substackcdn.com/image/fetch/$s_!5iw_!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74bf0f50-27ab-4d38-b9d0-fd0b37f41546_1978x1236.png"
+image = "https://assets.bytebytego.com/diagrams/0091-btree-lsm.png"
 +++
 
 I recently read the 3rd chapter of the _Designing Data-Intensive Applications_ book, and this blog aims to share my take on the internals of database indexes and how they have been designed. If you haven't read this book—especially the 3rd chapter—I fully encourage you to check it out, as it is an amazing read. However, you can also go through this blog, where I’ve prepared some diagrams to show the full picture all at once. As the old saying goes, _a picture is worth a thousand words._ I hope you enjoy it.
